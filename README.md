@@ -19,3 +19,6 @@ guide here if you need it: https://github.com/mpv-player/mpv
 
 I think MPV is installed by default on your distro. It should atleast be in your package manager so if you're on debian or ubuntu ```sudo apt install mpv``` should work.
 I really can't rememeber if I even had to install mpv or not. This isn't a very good guide.
+
+step 4: Download and run our awful youtube client. If you want to search for and watch a video. It works. Not very well. But it works.
+
