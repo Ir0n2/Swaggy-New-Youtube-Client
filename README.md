@@ -1,12 +1,13 @@
 # Swaggy-New-Youtube-Client
 youtube client because youtube is fucking stupid.
 
-step 0: Have ffmpeg installed.
-I always think this is installed by default. 
+step 0: Have ffmpeg installed. I always think this is installed by default. 
+
 If it ain't: 
+
 ```sudo apt install ffmpeg``` 
-I hope whatever version your distros repository gives you works. 
-If you're on windows. Use WSL debian idk
+
+I hope whatever version your distros repository gives you works. If you're on windows. Use WSL debian idk.
 
 Step 1: download the latest version of yt-dlp
 Guide here:
