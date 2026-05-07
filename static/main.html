@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<html>
+<head>
+        <title>YT Downloader</title>
+        <style>
+                body {
+                        background: #111;
+                        color: white;
+                        font-family: Arial;
+                        padding: 40px;
+                }
+
+                .container {
+                        max-width: 600px;
+                        margin: auto;
+                        background: #1d1d1d;
+                        padding: 20px;
+                        border-radius: 10px;
+                }
+
+                input, select, button {
+                        width: 100%;
+                        padding: 12px;
+                        margin-top: 10px;
+                        border: none;
+                        border-radius: 5px;
+                }
+
+                button {
+                        background: red;
+                        color: white;
+                        cursor: pointer;
+                }
+
+                button:hover {
+                        background: darkred;
+                }
+        </style>
+</head>
+<body>
+
+<div class="container">
+        <h1>YouTube Downloader</h1>
+
+        <form action="/" method="POST">
+
+                <input type="text" name="url" placeholder="Video URL" required>
+
+                <select name="mode">
+                        <option value="video">Video</option>
+                        <option value="playlist">Playlist</option>
+                </select>
+
+                <input type="text" name="format" placeholder="mp4, mp3, mkv..." required>
+
+                <a href="/"><button type="submit">Download</button></a>
+
+        </form>
+</div>
+
+<center>
+<div>
+<h1>Downloaded files:</h1>
+<iframe id="filesFrame" src="/temp" width="100%" height="300" style="border:1px solid black;"></iframe>
+<a href="/temp.zip">
+    <button>Download ALL (ZIP)</button>
+</a>
+<!-- <a href="/temp">Link to downloads directory</a> --->
+</div>
+
+<h1>Downloading Files</h1>
+<p>Download Video and Audio from single youtube videos or whole playlists.</p>
+<p>Once your download is complete, the file will appear in the downloads iframe on the webpage.</p>
+
+<h2>
+Desktop Instructions
+</h2>
+<p>To download a single file on desktop:</p>
+
+<p>Hover your mouse over the file link inside the downloads iframe</p>
+<p>Right click the link (or double tap your mouse pad)</p>
+<p>Click "Save Link As..."</p>
+<p>Choose where you'd like to save the file</p>
+
+<p>The file will then download directly to your computer.</p>
+
+<h2>Mobile Instructions</h2>
+
+<p>To download a single file on mobile:</p>
+
+<p>Press and hold the file link</p>
+<p>Wait for the options menu to appear</p>
+<p>Tap the download option (such as "Download Link" or "Save Link" depending on your browser)</p>
+
+<p>The file will then download to your device.</p>
+
+<h2>Downloading Everything at Once</h2>
+<p>
+If you prefer, you can use the "Download All" button to download the entire downloads folder as a ZIP archive.
+</p>
+</center>
+
+<script>
+function refreshFiles() {
+    document.getElementById("filesFrame").src ="/temp";
+}
+
+// refresh every 3 sec
+setInterval(refreshFiles, 3000);
+</script>
+
+</body>
+</html>
+
